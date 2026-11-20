@@ -1,0 +1,62 @@
+\n[1] Registrar cliente válido
+OK: Cliente Laura Gómez | laura@email.com | 3001234567
+Fin de operación.
+\n[2] Registrar segundo cliente
+OK: Cliente Carlos Pérez | carlos@email.com | 3107654321
+Fin de operación.
+\n[3] Rechazar correo inválido
+ERROR CONTROLADO: El correo electrónico no es válido.
+Fin de operación.
+\n[4] Registrar sala
+OK: Sala Sala de reuniones - $50,000.00/hora
+Fin de operación.
+\n[5] Registrar equipo
+OK: Equipo Computador portátil - $12,000.00/hora/unidad
+Fin de operación.
+\n[6] Registrar asesoría
+OK: Asesoría Asesoría de software - $80,000.00/hora
+Fin de operación.
+\n[7] Rechazar tarifa cero
+ERROR CONTROLADO: La tarifa debe ser un número positivo.
+Fin de operación.
+\n[8] Crear reserva de sala
+OK: R001: Laura Gómez / Sala de reuniones / PENDIENTE
+Fin de operación.
+\n[9] Confirmar reserva
+OK: CONFIRMADA
+Fin de operación.
+\n[10] Procesar reserva con impuesto del 19%
+OK: $107,100.00
+Fin de operación.
+\n[11] Impedir reprocesamiento
+ERROR CONTROLADO: La reserva debe estar confirmada para procesarse.
+Fin de operación.
+\n[12] Rechazar duración negativa
+ERROR CONTROLADO: La duración debe ser positiva.
+Fin de operación.
+\n[13] Procesar alquiler de dos equipos
+OK: $81,396.00
+Fin de operación.
+\n[14] Procesar asesoría especializada
+OK: $157,080.00
+Fin de operación.
+\n[15] Buscar cliente inexistente
+ERROR CONTROLADO: No existe el cliente C999.
+Fin de operación.
+\n[16] Rechazar reserva de servicio no disponible
+ERROR CONTROLADO: Sala fuera de servicio no está disponible.
+Fin de operación.
+\nRESUMEN: {'clientes': 2, 'servicios': 3, 'reservas': 3}
+Logs: /mnt/data/SoftwareFJ_Fase4/software_fj.log
+
+--- STDERR ---
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.

@@ -1,0 +1,95 @@
+2026-11-20 21:56:34,839 | INFO | Registro creado: C001
+2026-11-20 21:56:34,839 | INFO | Operación 1 completada
+2026-11-20 21:56:34,839 | INFO | Registro creado: C002
+2026-11-20 21:56:34,839 | INFO | Operación 2 completada
+2026-11-20 21:56:34,839 | ERROR | Error controlado en operación 3
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 30, in <lambda>
+    Cliente("C003", "Cliente Inválido", "correo-no-valido", "3001234567")))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 32, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 42, in correo
+    raise DatosInvalidosError("El correo electrónico no es válido.")
+software_fj.excepciones.DatosInvalidosError: El correo electrónico no es válido.
+2026-11-20 21:56:34,841 | INFO | Registro creado: S001
+2026-11-20 21:56:34,841 | INFO | Operación 4 completada
+2026-11-20 21:56:34,841 | INFO | Registro creado: E001
+2026-11-20 21:56:34,841 | INFO | Operación 5 completada
+2026-11-20 21:56:34,841 | INFO | Registro creado: A001
+2026-11-20 21:56:34,841 | INFO | Operación 6 completada
+2026-11-20 21:56:34,841 | ERROR | Error controlado en operación 7
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 38, in <lambda>
+    ejecutar(7, "Rechazar tarifa cero", lambda: ReservaSala("S002", "Sala inválida", 0))
+                                                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 64, in __init__
+    raise DatosInvalidosError("La tarifa debe ser un número positivo.")
+software_fj.excepciones.DatosInvalidosError: La tarifa debe ser un número positivo.
+2026-11-20 21:56:34,841 | INFO | Registro creado: R001
+2026-11-20 21:56:34,841 | INFO | Operación 8 completada
+2026-11-20 21:56:34,841 | INFO | Operación 9 completada
+2026-11-20 21:56:34,841 | INFO | Operación 10 completada
+2026-11-20 21:56:34,841 | ERROR | Error controlado en operación 11
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 46, in <lambda>
+    ejecutar(11, "Impedir reprocesamiento", lambda: r1.procesar())
+                                                    ~~~~~~~~~~~^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 174, in procesar
+    raise ReservaError("La reserva debe estar confirmada para procesarse.")
+software_fj.excepciones.ReservaError: La reserva debe estar confirmada para procesarse.
+2026-11-20 21:56:34,842 | ERROR | Error controlado en operación 12
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 48, in <lambda>
+    lambda: Reserva("R002", cliente1, equipo, -2, cantidad=2))
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 152, in __init__
+    raise DatosInvalidosError("La duración debe ser positiva.")
+software_fj.excepciones.DatosInvalidosError: La duración debe ser positiva.
+2026-11-20 21:56:34,842 | INFO | Registro creado: R003
+2026-11-20 21:56:34,842 | INFO | Operación 13 completada
+2026-11-20 21:56:34,842 | INFO | Registro creado: R004
+2026-11-20 21:56:34,842 | INFO | Operación 14 completada
+2026-11-20 21:56:34,842 | ERROR | Error controlado en operación 15
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 64, in <lambda>
+    ejecutar(15, "Buscar cliente inexistente", lambda: app.buscar_cliente("C999"))
+                                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/gestor.py", line 39, in buscar_cliente
+    raise DatosInvalidosError(f"No existe el cliente {identificador}.")
+software_fj.excepciones.DatosInvalidosError: No existe el cliente C999.
+2026-11-20 21:56:34,842 | ERROR | Error controlado en operación 16
+Traceback (most recent call last):
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 9, in ejecutar
+    resultado = funcion()
+  File "/mnt/data/SoftwareFJ_Fase4/main.py", line 68, in <lambda>
+    lambda: Reserva("R005", cliente2, servicio_inactivo, 1))
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 153, in __init__
+    servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data/SoftwareFJ_Fase4/software_fj/modelos.py", line 78, in validar_disponibilidad
+    raise ServicioNoDisponibleError(f"{self.nombre} no está disponible.")
+software_fj.excepciones.ServicioNoDisponibleError: Sala fuera de servicio no está disponible.
+2026-11-20 22:33:25,944 | INFO | Registro creado: CLI001
+2026-11-20 22:33:25,945 | INFO | Opción del menú ejecutada: 1
+2026-11-20 22:33:25,945 | INFO | Registro creado: SALA01
+2026-11-20 22:33:25,945 | INFO | Opción del menú ejecutada: 2
+2026-11-20 22:33:25,946 | INFO | Registro creado: RES001
+2026-11-20 22:33:25,946 | INFO | Opción del menú ejecutada: 3
+2026-11-20 22:33:25,946 | INFO | Opción del menú ejecutada: 4
+2026-11-20 22:33:25,947 | INFO | Opción del menú ejecutada: 4
+2026-11-20 22:33:25,947 | INFO | Opción del menú ejecutada: 5
+2026-11-20 17:36:22,918 | INFO | Registro creado: Jose
+2026-11-20 17:36:22,918 | INFO | Opción del menú ejecutada: 1
